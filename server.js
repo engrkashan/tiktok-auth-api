@@ -42,7 +42,6 @@ app.get("/auth", (req, res) => {
 });
 
 // Step 2: Handle TikTok callback and exchange code for access token
-// Step 2: Handle TikTok callback and exchange code for access token
 app.get("/auth/callback", async (req, res) => {
   const { code } = req.query;
 
@@ -51,7 +50,6 @@ app.get("/auth/callback", async (req, res) => {
   }
 
   try {
-    // Use 'x-www-form-urlencoded' for the body
     const params = new URLSearchParams();
     params.append("client_key", CLIENT_ID);
     params.append("client_secret", CLIENT_SECRET);
